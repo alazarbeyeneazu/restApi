@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alazarbeyeneazu/restApi/romanNumerals"
+	"github.com/alazarbeyeneazu/restApi/romannumbers"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 				w.Write([]byte("404 - Not Found"))
 			} else {
 				fmt.Fprintf(w, "%q",
-					html.EscapeString(romanNumerals.Numerals[number]))
+					html.EscapeString(romannumbers.Numerals[number]))
 			}
 		} else {
 			// For all other requests, tell that Client sent a bad request
